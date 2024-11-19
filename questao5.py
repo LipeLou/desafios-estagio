@@ -9,5 +9,4 @@ b) Evite usar funções prontas, como, por exemplo, reverse;
 txt = input('Digite um texto: ')
 
 # Invertendo ela
-for i in range(1, len(txt) + 1):
-    print(f'{txt[-i]}', end='')
+print(txt[::-1])
