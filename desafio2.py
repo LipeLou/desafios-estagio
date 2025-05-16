@@ -1,5 +1,5 @@
 '''
-3) Dado um vetor que guarda o valor de faturamento diário de uma distribuidora, faça um programa, na linguagem que desejar, que calcule e retorne:
+2) Dado um vetor que guarda o valor de faturamento diário de uma distribuidora, faça um programa, na linguagem que desejar, que calcule e retorne:
 • O menor valor de faturamento ocorrido em um dia do mês;
 • O maior valor de faturamento ocorrido em um dia do mês;
 • Número de dias no mês em que o valor de faturamento diário foi superior à média mensal.
@@ -46,24 +46,29 @@ data_json = '''
 ]
 '''
 
-# Armazenando os dados
-dados = loads(data_json)
+def dados_faturamento(dados):
 
-# Descartando os valores nulos
-valores = [item['valor'] for item in dados if item['valor'] > 0]
+    # Armazenando os dados
+    dados = loads(data_json)
 
-# Armazenando o menor e menor valor e a media
-menor_valor = min(valores)
-maior_valor = max(valores)
-media_mensal = sum(valores) / len(valores)
+    # Descartando os valores nulos
+    valores = [item['valor'] for item in dados if item['valor'] > 0]
 
-# Valores acima da média
-# List comprehension -  expr for item in lista if cond
-dias_superior_media = list(valor for valor in valores if valor > media_mensal)
+    # Armazenando o menor e menor valor e a media
+    menor_valor = min(valores)
+    maior_valor = max(valores)
+    media_mensal = sum(valores) / len(valores)
 
-# Total de valores acima da média
-total_dias_superior_media = len(dias_superior_media)
+    # Valores acima da média
+    # List comprehension -  expr for item in lista if cond
+    dias_superior_media = list(valor for valor in valores if valor > media_mensal)
 
+    # Total de valores acima da média
+    total_dias_superior_media = len(dias_superior_media)
+
+    return menor_valor, maior_valor, total_dias_superior_media
+
+menor_valor, maior_valor, total_dias_superior_media = dados_faturamento(data_json)
 print(f'Menor valor de faturamento: {menor_valor:.2f}')
 print(f'Maior valor de faturamento: {maior_valor:.2f}')
 print(f'Número de dias com faturamento superior à média: {total_dias_superior_media}')
