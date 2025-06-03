@@ -52,3 +52,18 @@ Exemplo 2:
   Entrada: nums = [0,3,7,2,5,8,4,6,0,1]
   Saída: 9
 ```
+
+## Desafio 6
+>Gerador de Token, a partir do código fornecido, desenvolva uma função para gerar um Token seguro, que atenda aos seguintes critérios obrigatórios:
+
+```
+  O Token deve conter pelo menos uma letra maiúscula.
+
+  O Token deve conter pelo menos uma letra minúscula.
+
+  O Token deve conter pelo menos um número.
+
+  O Token deve conter pelo menos um caractere especial (!@#$%^&*()_+-=<>?).
+
+  O tamanho do Token deve ser definido pelo usuário, sendo no mínimo 8 caracteres.
+```
