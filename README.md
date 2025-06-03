@@ -57,13 +57,9 @@ Exemplo 2:
 >Gerador de Token, a partir do código fornecido, desenvolva uma função para gerar um Token seguro, que atenda aos seguintes critérios obrigatórios:
 
 ```
-  O Token deve conter pelo menos uma letra maiúscula.
-
-  O Token deve conter pelo menos uma letra minúscula.
-
-  O Token deve conter pelo menos um número.
-
-  O Token deve conter pelo menos um caractere especial (!@#$%^&*()_+-=<>?).
-
-  O tamanho do Token deve ser definido pelo usuário, sendo no mínimo 8 caracteres.
+1. O Token deve conter pelo menos uma letra maiúscula.
+2. O Token deve conter pelo menos uma letra minúscula.
+3. O Token deve conter pelo menos um número.
+4. O Token deve conter pelo menos um caractere especial (!@#$%^&*()_+-=<>?).
+5. O tamanho do Token deve ser definido pelo usuário, sendo no mínimo 8 caracteres.
 ```
